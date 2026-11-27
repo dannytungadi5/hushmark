@@ -15,35 +15,36 @@ fs.mkdirSync("/tmp/bench", { recursive: true });
 
 async function draw(s, variant) {
   return page.evaluate(async ({ s, variant, date }) => {
-    const font = variant === "sans" ? "Arial, sans-serif" : "'Courier New', monospace";
+    const font = (variant === "sans" || variant === "indo") ? "Arial, sans-serif" : "'Courier New', monospace";
+    const L = variant === "indo" ? { date: "TANGGAL", ref: "NO. REF", name: "NAMA", tax: "PPN", total: "TOTAL" } : { date: "DATE", ref: "REF", name: "NAME", tax: "TAX", total: "TOTAL USD" };
     const sub = s.lines.reduce((a, l) => a + l[1], 0), tax = s.tax || 0;
     const W = 520, H = 400 + s.lines.length * 44 + 160;
     const c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d");
     g.fillStyle = "#fbfaf4"; g.fillRect(0, 0, W, H); g.fillStyle = "#1b1b18"; g.textAlign = "center";
     g.font = `bold 28px ${font}`; g.fillText(s.title.toUpperCase(), W / 2, 66);
-    g.font = `20px ${font}`; g.fillText(s.sub, W / 2, 98); g.fillText(`DATE: ${date}`, W / 2, 130);
-    g.textAlign = "left"; g.fillText(`REF: ${s.ref}`, 30, 170); g.fillText(`NAME: ${s.party}`, 30, 200); g.fillText("-".repeat(36), 30, 230);
+    g.font = `20px ${font}`; g.fillText(s.sub, W / 2, 98); g.fillText(`${L.date}: ${date}`, W / 2, 130);
+    g.textAlign = "left"; g.fillText(`${L.ref}: ${s.ref}`, 30, 170); g.fillText(`${L.name}: ${s.party}`, 30, 200); g.fillText("-".repeat(36), 30, 230);
     let y = 270;
     for (const [n, a] of s.lines) { g.fillText(n, 30, y); g.textAlign = "right"; g.fillText(a.toFixed(2), W - 30, y); g.textAlign = "left"; y += 44; }
     g.fillText("-".repeat(36), 30, y); y += 40;
-    if (tax) { g.fillText("TAX", 30, y); g.textAlign = "right"; g.fillText(tax.toFixed(2), W - 30, y); g.textAlign = "left"; y += 40; }
-    g.font = `bold 26px ${font}`; g.fillText("TOTAL USD", 30, y + 6); g.textAlign = "right"; g.fillText((sub + tax).toFixed(2), W - 30, y + 6);
-    if (variant !== "degraded") return c.toDataURL("image/jpeg", 0.9);
+    if (tax) { g.fillText(L.tax, 30, y); g.textAlign = "right"; g.fillText(tax.toFixed(2), W - 30, y); g.textAlign = "left"; y += 40; }
+    g.font = `bold 26px ${font}`; g.fillText(L.total, 30, y + 6); g.textAlign = "right"; g.fillText((sub + tax).toFixed(2), W - 30, y + 6);
+    const hard = variant === "tilt"; if (variant !== "degraded" && !hard) return c.toDataURL("image/jpeg", 0.9);
     // degraded: rotate 2.5 degrees, blur, noise, low JPEG quality, 0.7 scale
-    const d = document.createElement("canvas"); d.width = Math.round(W * 0.7); d.height = Math.round(H * 0.7); const h = d.getContext("2d");
-    h.fillStyle = "#d8d4c8"; h.fillRect(0, 0, d.width, d.height); h.filter = "blur(0.7px)";
-    h.translate(d.width / 2, d.height / 2); h.rotate((2.5 * Math.PI) / 180); h.drawImage(c, -d.width / 2, -d.height / 2, d.width, d.height);
+    const d = document.createElement("canvas"); const sc = hard ? 0.55 : 0.7; d.width = Math.round(W * sc); d.height = Math.round(H * sc); const h = d.getContext("2d");
+    h.fillStyle = "#d8d4c8"; h.fillRect(0, 0, d.width, d.height); h.filter = hard ? "blur(1.3px)" : "blur(0.7px)";
+    h.translate(d.width / 2, d.height / 2); h.rotate(((hard ? -7 : 2.5) * Math.PI) / 180); h.drawImage(c, -d.width / 2, -d.height / 2, d.width, d.height);
     h.setTransform(1, 0, 0, 1, 0, 0); h.filter = "none";
     const im = h.getImageData(0, 0, d.width, d.height);
-    for (let i = 0; i < im.data.length; i += 4) { const n = (Math.random() - 0.5) * 36; im.data[i] += n; im.data[i + 1] += n; im.data[i + 2] += n; }
+    for (let i = 0; i < im.data.length; i += 4) { const n = (Math.random() - 0.5) * (hard ? 56 : 36); im.data[i] += n; im.data[i + 1] += n; im.data[i + 2] += n; }
     h.putImageData(im, 0, 0);
-    return d.toDataURL("image/jpeg", 0.5);
+    return d.toDataURL("image/jpeg", hard ? 0.4 : 0.5);
   }, { s, variant, date });
 }
 let date;
 for (const mode of ["health", "motor", "travel", "expenses"]) {
   await page.click(`#types button[data-t="${mode}"]`);
-  for (const s of SAMPLES[mode]) for (const variant of ["clean", "sans", "degraded"]) {
+  for (const s of SAMPLES[mode]) for (const variant of (process.env.VARIANTS || "clean,sans,degraded,tilt,indo").split(",")) {
     date = iso(s.d);
     const url = await draw(s, variant);
     const file = `/tmp/bench/${s.id}-${variant}.jpg`; fs.writeFileSync(file, Buffer.from(url.split(",")[1], "base64"));
