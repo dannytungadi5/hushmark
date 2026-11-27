@@ -130,6 +130,11 @@ function wire() {
   $("#types").innerHTML = MODE_IDS.map((m) => `<button data-t="${m}" aria-pressed="false">${PROFILES[m].label}</button>`).join("");
   $("#types").addEventListener("click", (e) => { const t = e.target.dataset?.t; if (!t) return; type = t; store.set("cc_type", t); renderType(); });
 
+  $("#try1")?.addEventListener("click", () => { // one click from the hero: Motor desk, the "invoice before incident" sample, result visible without upload
+    type = "motor"; store.set("cc_type", type); renderType();
+    setTimeout(() => document.querySelector('#samples button[data-s="m-late"]')?.click(), 250);
+  });
+
   $("#samples").addEventListener("click", async (e) => {
     const id = e.target.dataset?.s; if (!id) return;
     Object.assign(pol().params, sampleSetup(type, id)); // e.g. incident date or trip dates that fit the example
