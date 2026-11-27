@@ -1,0 +1,32 @@
+name: nano-probe
+# Probe only: tests Gemini Nano (Chrome Prompt API) on a real desktop Chrome. No secrets. Safe to delete.
+on:
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/nano-probe.yml', '.github/nano/nano-ci.mjs']
+jobs:
+  probe:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install puppeteer-core
+        working-directory: .github/nano
+        run: |
+          npm init -y
+          npm i puppeteer-core
+      - name: Run probe
+        working-directory: .github/nano
+        shell: bash
+        run: node nano-ci.mjs 2>&1 | tee probe.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nano-probe
+          path: |
+            .github/nano/*.png
+            .github/nano/*.json
+            .github/nano/probe.log
