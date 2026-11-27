@@ -2,7 +2,6 @@
 import puppeteer from 'puppeteer-core';
 import os from 'node:os';
 import fs from 'node:fs';
-import { execSync } from 'node:child_process';
 const CHROME = process.env.CHROME_PATH || 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const URL = 'https://hushmark.pages.dev/';
 const log = (...a) => console.log('[nano-ci]', ...a);
@@ -10,6 +9,8 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 log('cpus', os.cpus().length, 'ramGB', (os.totalmem() / 2 ** 30).toFixed(1));
 const OPTS = { expectedInputs: [{ type: 'text', languages: ['en'] }], expectedOutputs: [{ type: 'text', languages: ['en'] }] };
 const results = {};
+const deepText = () => { const out = []; const walk = (n) => { if (n.nodeType === 3) { const t = n.textContent.trim(); if (t) out.push(t); } if (n.shadowRoot) walk(n.shadowRoot); n.childNodes && n.childNodes.forEach(walk); }; walk(document.body); return out.join(' | '); };
+const deepClick = (rx) => { const walk = (n) => { if (n.nodeType === 1 && n.tagName === 'BUTTON' && new RegExp(rx, 'i').test(n.textContent)) { n.click(); return true; } if (n.shadowRoot && walk(n.shadowRoot)) return true; for (const c of n.childNodes || []) if (walk(c)) return true; return false; }; return walk(document.body); };
 async function attempt(name, { localStateFlags, features }) {
   const dir = 'C:\\nano-' + name;
   fs.mkdirSync(dir, { recursive: true });
@@ -24,15 +25,18 @@ async function attempt(name, { localStateFlags, features }) {
   const avail = (o) => page.evaluate(async (o) => (typeof LanguageModel === 'undefined' ? 'no-api' : await LanguageModel.availability(o)), o);
   let av = await avail(OPTS); log(name, 'availability', av);
   const r = { first: av };
-  // internals page: reason text
   try {
     const p2 = await browser.newPage();
-    await p2.goto('chrome://on-device-internals', { waitUntil: 'load' }); await sleep(4000);
-    const txt = await p2.evaluate(() => document.body.innerText + ' ' + (document.querySelector('on-device-internals-app')?.shadowRoot?.textContent || '')).catch(() => '');
-    log(name, 'internals:', txt.replace(/\s+/g, ' ').slice(0, 900));
+    await p2.goto('chrome://chrome-urls', { waitUntil: 'load' }); await sleep(1500);
+    log(name, 'enable debug pages click:', await p2.evaluate(deepClick, 'enable'));
+    await sleep(1500);
+    await p2.goto('chrome://on-device-internals', { waitUntil: 'load' }); await sleep(5000);
+    const txt = await p2.evaluate(deepText).catch((e) => 'err ' + e);
+    log(name, 'internals:', String(txt).replace(/\s+/g, ' ').slice(0, 1500));
     await p2.screenshot({ path: 'nano-' + name + '-internals.png' }).catch(() => {});
     await p2.close();
-  } catch (e) { log(name, 'internals err', String(e).slice(0, 120)); }
+  } catch (e) { log(name, 'internals err', String(e).slice(0, 160)); }
+  av = await avail(OPTS); log(name, 'availability recheck', av);
   if (av === 'downloadable' || av === 'downloading') {
     const d = await Promise.race([
       page.evaluate(async (o) => { let last = 0; try { const s = await LanguageModel.create({ ...o, monitor(m) { m.addEventListener('downloadprogress', (e) => { last = e.loaded; }); } }); s.destroy(); return { created: true, last }; } catch (e) { return { created: false, error: String(e), last }; } }, OPTS),
