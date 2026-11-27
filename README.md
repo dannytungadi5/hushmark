@@ -70,7 +70,7 @@ Everything here was written during the submission period (Nov 11 to Nov 30, 2026
 
 ## Measured accuracy (synthetic documents, cloud path)
 
-24 synthetic images (8 examples x clean / sans-serif / degraded): all 24 read by the cloud path, 21 of 24 had all six scored fields right (87.5%); the 3 misses were an empty patient name, never a wrong value. Details, method and limits: `docs/benchmark.md`. Real documents are harder; Nano is not measured.
+40 synthetic images (8 examples x 5 variants), all read by the cloud path. Clean, sans-serif and degraded (24 images): 22 of 24 had all six scored fields right (91.7%); the misses were an empty patient or traveller name. Indonesian labels: 6 of 8. A deliberately bad tilted, blurred, noisy set: 0 of 8 fully right, with wrong digits in references and dates, one wrong total and one invented name. So on poor photos the AI can read values wrongly; a handler still checks the photo. Details, method and limits: `docs/benchmark.md`. Real documents are harder; Nano is not measured.
 
 ## Rule packs and audit trail
 
