@@ -82,7 +82,7 @@ async function withRetry(fn, tries = 3, base = 2500) {
 
 const promptFor = (mode) => `You read a photo of an insurance claim document: a ${PROFILES[mode].doc}.
 Return JSON only. Fields: provider, reference (${PROFILES[mode].reference}), party (${PROFILES[mode].party}), date (YYYY-MM-DD), currency (ISO code), total (number, final amount billed), tax (number or null), category (one of ${PROFILES[mode].categories.join(", ")}), confidence (0-1), lineItems (REQUIRED: description and amount for every printed line, do not skip lines).
-If a field is not visible, omit it. Never invent values. Do not judge whether the claim should be paid.`;
+party: copy the person named on the document exactly as printed (a NAME, NAMA, PATIENT, INSURED, DRIVER or TRAVELLER line counts). Leave party out only when no person name is printed. If another field is not visible, omit it. Never invent values. Do not judge whether the claim should be paid.`;
 
 /** Cloud chain: each model is tried in order (quota is per model), always ONLY_IN_CLOUD. */
 async function cloudChain(parts, claimMode) {
