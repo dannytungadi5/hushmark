@@ -1,869 +1,1474 @@
 [
- {
-  "id": "h-clinic",
-  "mode": "health",
-  "variant": "clean",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": false,
-   "date": true,
-   "total": true,
-   "category": true
+  {
+    "id": "h-clinic",
+    "mode": "health",
+    "variant": "clean",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "KLINIK SEHAT SENTOSA",
+      "date": "2026-11-18",
+      "total": 79.5,
+      "category": "Consultation",
+      "party": "Budi Santoso",
+      "reference": "INV-20418",
+      "badge": "CLOUD · Gemini",
+      "flags": []
+    },
+    "truth": {
+      "provider": "Klinik Sehat Sentosa",
+      "reference": "INV-20418",
+      "party": "Budi Santoso",
+      "date": "2026-11-18",
+      "total": 79.5,
+      "category": "Consultation"
+    },
+    "log": "7:49:08 PM  Done in 3.0s via in-cloud.7:49:05 PM  Reading in the cloud with Gemini…7:49:05 PM  Reading h-clinic-clean.jpg (Health, cloud)…"
   },
-  "got": {
-   "provider": "KLINIK SEHAT SENTOSA",
-   "date": "2026-11-18",
-   "total": 79.5,
-   "category": "Consultation",
-   "party": "",
-   "reference": "INV-20418",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Patient name is missing. The handler cannot match this document to the insured."
-   ]
+  {
+    "id": "h-clinic",
+    "mode": "health",
+    "variant": "sans",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "KLINIK SEHAT SENTOSA",
+      "date": "2026-11-18",
+      "total": 79.5,
+      "category": "Consultation",
+      "party": "Budi Santoso",
+      "reference": "INV-20418",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Klinik Sehat Sentosa",
+      "reference": "INV-20418",
+      "party": "Budi Santoso",
+      "date": "2026-11-18",
+      "total": 79.5,
+      "category": "Consultation"
+    },
+    "log": "7:49:11 PM  Done in 1.4s via in-cloud.7:49:09 PM  Reading in the cloud with Gemini…7:49:09 PM  Reading h-clinic-sans.jpg (Health, cloud)…"
   },
-  "truth": {
-   "provider": "Klinik Sehat Sentosa",
-   "reference": "INV-20418",
-   "party": "Budi Santoso",
-   "date": "2026-11-18",
-   "total": 79.5,
-   "category": "Consultation"
+  {
+    "id": "h-clinic",
+    "mode": "health",
+    "variant": "degraded",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "KLINIK SEHAT SENTOSA",
+      "date": "2026-11-18",
+      "total": 79.5,
+      "category": "Consultation",
+      "party": "Budi Santoso",
+      "reference": "INV-20418",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Klinik Sehat Sentosa",
+      "reference": "INV-20418",
+      "party": "Budi Santoso",
+      "date": "2026-11-18",
+      "total": 79.5,
+      "category": "Consultation"
+    },
+    "log": "7:49:14 PM  Done in 2.0s via in-cloud.7:49:12 PM  Reading in the cloud with Gemini…7:49:12 PM  Reading h-clinic-degraded.jpg (Health, cloud)…"
+  },
+  {
+    "id": "h-hospital",
+    "mode": "health",
+    "variant": "clean",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "RS HARAPAN BUNDA",
+      "date": "2026-10-24",
+      "total": 1655,
+      "category": "Hospital room",
+      "party": "Budi Santoso",
+      "reference": "IP-77310",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Hospital room cap is 900 USD; this document is 1655.00.",
+        "No itemised lines. Ask for an itemised document before paying."
+      ]
+    },
+    "truth": {
+      "provider": "RS Harapan Bunda",
+      "reference": "IP-77310",
+      "party": "Budi Santoso",
+      "date": "2026-10-24",
+      "total": 1655,
+      "category": "Hospital room"
+    },
+    "log": "7:49:17 PM  Done in 1.6s via in-cloud.7:49:16 PM  Reading in the cloud with Gemini…7:49:16 PM  Reading h-hospital-clean.jpg (Health, cloud)…"
+  },
+  {
+    "id": "h-hospital",
+    "mode": "health",
+    "variant": "sans",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "RS HARAPAN BUNDA",
+      "date": "2026-10-24",
+      "total": 1655,
+      "category": "Hospital room",
+      "party": "Budi Santoso",
+      "reference": "IP-77310",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Hospital room cap is 900 USD; this document is 1655.00.",
+        "No itemised lines. Ask for an itemised document before paying.",
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "RS Harapan Bunda",
+      "reference": "IP-77310",
+      "party": "Budi Santoso",
+      "date": "2026-10-24",
+      "total": 1655,
+      "category": "Hospital room"
+    },
+    "log": "7:49:21 PM  Done in 1.9s via in-cloud.7:49:19 PM  Reading in the cloud with Gemini…7:49:19 PM  Reading h-hospital-sans.jpg (Health, cloud)…"
+  },
+  {
+    "id": "h-hospital",
+    "mode": "health",
+    "variant": "degraded",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": false,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "RS HARAPAN BUNDA",
+      "date": "2026-10-24",
+      "total": 1655,
+      "category": "Hospital room",
+      "party": "",
+      "reference": "IP-77310",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Patient name is missing. The handler cannot match this document to the insured.",
+        "Hospital room cap is 900 USD; this document is 1655.00.",
+        "No itemised lines. Ask for an itemised document before paying.",
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "RS Harapan Bunda",
+      "reference": "IP-77310",
+      "party": "Budi Santoso",
+      "date": "2026-10-24",
+      "total": 1655,
+      "category": "Hospital room"
+    },
+    "log": "7:49:24 PM  Done in 1.8s via in-cloud.7:49:22 PM  Reading in the cloud with Gemini…7:49:22 PM  Reading h-hospital-degraded.jpg (Health, cloud)…"
+  },
+  {
+    "id": "m-bumper",
+    "mode": "motor",
+    "variant": "clean",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "BENGKEL JAYA MOTOR",
+      "date": "2026-11-21",
+      "total": 720,
+      "category": "Repair invoice",
+      "party": "Dewi Lestari",
+      "reference": "B 1234 XYZ",
+      "badge": "CLOUD · Gemini",
+      "flags": []
+    },
+    "truth": {
+      "provider": "Bengkel Jaya Motor",
+      "reference": "B 1234 XYZ",
+      "party": "Dewi Lestari",
+      "date": "2026-11-21",
+      "total": 720,
+      "category": "Repair invoice"
+    },
+    "log": "7:49:27 PM  Done in 1.5s via in-cloud.7:49:26 PM  Reading in the cloud with Gemini…7:49:26 PM  Reading m-bumper-clean.jpg (Motor, cloud)…"
+  },
+  {
+    "id": "m-bumper",
+    "mode": "motor",
+    "variant": "sans",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "BENGKEL JAYA MOTOR",
+      "date": "2026-11-21",
+      "total": 720,
+      "category": "Repair invoice",
+      "party": "Dewi Lestari",
+      "reference": "B 1234 XYZ",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Bengkel Jaya Motor",
+      "reference": "B 1234 XYZ",
+      "party": "Dewi Lestari",
+      "date": "2026-11-21",
+      "total": 720,
+      "category": "Repair invoice"
+    },
+    "log": "7:49:30 PM  Done in 1.8s via in-cloud.7:49:29 PM  Reading in the cloud with Gemini…7:49:29 PM  Reading m-bumper-sans.jpg (Motor, cloud)…"
+  },
+  {
+    "id": "m-bumper",
+    "mode": "motor",
+    "variant": "degraded",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "BENGKEL JAYA MOTOR",
+      "date": "2026-11-21",
+      "total": 720,
+      "category": "Repair invoice",
+      "party": "Dewi Lestari",
+      "reference": "B 1234 XYZ",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Bengkel Jaya Motor",
+      "reference": "B 1234 XYZ",
+      "party": "Dewi Lestari",
+      "date": "2026-11-21",
+      "total": 720,
+      "category": "Repair invoice"
+    },
+    "log": "7:49:34 PM  Done in 1.8s via in-cloud.7:49:32 PM  Reading in the cloud with Gemini…7:49:32 PM  Reading m-bumper-degraded.jpg (Motor, cloud)…"
+  },
+  {
+    "id": "m-late",
+    "mode": "motor",
+    "variant": "clean",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "AUTO PRIMA GARAGE",
+      "date": "2026-10-28",
+      "total": 653,
+      "category": "Repair invoice",
+      "party": "Dewi Lestari",
+      "reference": "B 1234 XYZ",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "\"Oil change\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
+        "\"Wiper blades\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
+        "Labour is 64% of the invoice (limit 55%). Ask for a parts breakdown."
+      ]
+    },
+    "truth": {
+      "provider": "Auto Prima Garage",
+      "reference": "B 1234 XYZ",
+      "party": "Dewi Lestari",
+      "date": "2026-10-28",
+      "total": 653,
+      "category": "Repair invoice"
+    },
+    "log": "7:49:37 PM  Done in 1.6s via in-cloud.7:49:35 PM  Reading in the cloud with Gemini…7:49:35 PM  Reading m-late-clean.jpg (Motor, cloud)…"
+  },
+  {
+    "id": "m-late",
+    "mode": "motor",
+    "variant": "sans",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "AUTO PRIMA GARAGE",
+      "date": "2026-10-28",
+      "total": 653,
+      "category": "Repair invoice",
+      "party": "Dewi Lestari",
+      "reference": "B 1234 XYZ",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "\"Oil change\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
+        "\"Wiper blades\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
+        "Labour is 64% of the invoice (limit 55%). Ask for a parts breakdown.",
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Auto Prima Garage",
+      "reference": "B 1234 XYZ",
+      "party": "Dewi Lestari",
+      "date": "2026-10-28",
+      "total": 653,
+      "category": "Repair invoice"
+    },
+    "log": "7:49:40 PM  Done in 1.8s via in-cloud.7:49:39 PM  Reading in the cloud with Gemini…7:49:38 PM  Reading m-late-sans.jpg (Motor, cloud)…"
+  },
+  {
+    "id": "m-late",
+    "mode": "motor",
+    "variant": "degraded",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "AUTO PRIMA GARAGE",
+      "date": "2026-10-28",
+      "total": 653,
+      "category": "Repair invoice",
+      "party": "Dewi Lestari",
+      "reference": "B 1234 XYZ",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "\"Oil change\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
+        "\"Wiper blades\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
+        "Labour is 64% of the invoice (limit 55%). Ask for a parts breakdown.",
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Auto Prima Garage",
+      "reference": "B 1234 XYZ",
+      "party": "Dewi Lestari",
+      "date": "2026-10-28",
+      "total": 653,
+      "category": "Repair invoice"
+    },
+    "log": "7:49:44 PM  Done in 2.0s via in-cloud.7:49:42 PM  Reading in the cloud with Gemini…7:49:42 PM  Reading m-late-degraded.jpg (Motor, cloud)…"
+  },
+  {
+    "id": "t-clinic",
+    "mode": "travel",
+    "variant": "clean",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": false,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "BANGKOK CARE CLINIC",
+      "date": "2026-11-19",
+      "total": 147,
+      "category": "Medical abroad",
+      "party": "",
+      "reference": "TRV-55102",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Traveller name is missing. The handler cannot match this document to the insured.",
+        "No itemised lines. Ask for an itemised document before paying.",
+        "A medical bill abroad must name the traveller who was treated."
+      ]
+    },
+    "truth": {
+      "provider": "Bangkok Care Clinic",
+      "reference": "TRV-55102",
+      "party": "Sari Putri",
+      "date": "2026-11-19",
+      "total": 147,
+      "category": "Medical abroad"
+    },
+    "log": "7:49:47 PM  Done in 1.4s via in-cloud.7:49:45 PM  Reading in the cloud with Gemini…7:49:45 PM  Reading t-clinic-clean.jpg (Travel, cloud)…"
+  },
+  {
+    "id": "t-clinic",
+    "mode": "travel",
+    "variant": "sans",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "BANGKOK CARE CLINIC",
+      "date": "2026-11-19",
+      "total": 147,
+      "category": "Medical abroad",
+      "party": "Sari Putri",
+      "reference": "TRV-55102",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Bangkok Care Clinic",
+      "reference": "TRV-55102",
+      "party": "Sari Putri",
+      "date": "2026-11-19",
+      "total": 147,
+      "category": "Medical abroad"
+    },
+    "log": "7:49:50 PM  Done in 1.8s via in-cloud.7:49:48 PM  Reading in the cloud with Gemini…7:49:48 PM  Reading t-clinic-sans.jpg (Travel, cloud)…"
+  },
+  {
+    "id": "t-clinic",
+    "mode": "travel",
+    "variant": "degraded",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "BANGKOK CARE CLINIC",
+      "date": "2026-11-19",
+      "total": 147,
+      "category": "Medical abroad",
+      "party": "Sari Putri",
+      "reference": "TRV-55102",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Bangkok Care Clinic",
+      "reference": "TRV-55102",
+      "party": "Sari Putri",
+      "date": "2026-11-19",
+      "total": 147,
+      "category": "Medical abroad"
+    },
+    "log": "7:49:53 PM  Done in 1.7s via in-cloud.7:49:52 PM  Reading in the cloud with Gemini…7:49:52 PM  Reading t-clinic-degraded.jpg (Travel, cloud)…"
+  },
+  {
+    "id": "t-hotel",
+    "mode": "travel",
+    "variant": "clean",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "LOTUS BAY HOTEL",
+      "date": "2026-11-25",
+      "total": 263,
+      "category": "Hotel",
+      "party": "Sari Putri",
+      "reference": "TRV-55102",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "\"Minibar wine\": Item is normally not covered (alcohol, gifts, leisure).",
+        "\"Souvenir shop\": Item is normally not covered (alcohol, gifts, leisure)."
+      ]
+    },
+    "truth": {
+      "provider": "Lotus Bay Hotel",
+      "reference": "TRV-55102",
+      "party": "Sari Putri",
+      "date": "2026-11-25",
+      "total": 263,
+      "category": "Hotel"
+    },
+    "log": "7:49:57 PM  Done in 1.8s via in-cloud.7:49:55 PM  Reading in the cloud with Gemini…7:49:55 PM  Reading t-hotel-clean.jpg (Travel, cloud)…"
+  },
+  {
+    "id": "t-hotel",
+    "mode": "travel",
+    "variant": "sans",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "LOTUS BAY HOTEL",
+      "date": "2026-11-25",
+      "total": 263,
+      "category": "Hotel",
+      "party": "Sari Putri",
+      "reference": "TRV-55102",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "No itemised lines. Ask for an itemised document before paying.",
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Lotus Bay Hotel",
+      "reference": "TRV-55102",
+      "party": "Sari Putri",
+      "date": "2026-11-25",
+      "total": 263,
+      "category": "Hotel"
+    },
+    "log": "7:50:00 PM  Done in 1.8s via in-cloud.7:49:58 PM  Reading in the cloud with Gemini…7:49:58 PM  Reading t-hotel-sans.jpg (Travel, cloud)…"
+  },
+  {
+    "id": "t-hotel",
+    "mode": "travel",
+    "variant": "degraded",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "LOTUS BAY HOTEL",
+      "date": "2026-11-25",
+      "total": 263,
+      "category": "Hotel",
+      "party": "Sari Putri",
+      "reference": "TRV-55102",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "No itemised lines. Ask for an itemised document before paying.",
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Lotus Bay Hotel",
+      "reference": "TRV-55102",
+      "party": "Sari Putri",
+      "date": "2026-11-25",
+      "total": 263,
+      "category": "Hotel"
+    },
+    "log": "7:50:03 PM  Done in 1.9s via in-cloud.7:50:02 PM  Reading in the cloud with Gemini…7:50:02 PM  Reading t-hotel-degraded.jpg (Travel, cloud)…"
+  },
+  {
+    "id": "e-lunch",
+    "mode": "expenses",
+    "variant": "clean",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "KOPI KENANGAN SENOPATI",
+      "date": "2026-11-22",
+      "total": 21.67,
+      "category": "Meals",
+      "party": "Rina Putri",
+      "reference": "R-30412",
+      "badge": "CLOUD · Gemini",
+      "flags": []
+    },
+    "truth": {
+      "provider": "Kopi Kenangan Senopati",
+      "reference": "R-30412",
+      "party": "Rina Putri",
+      "date": "2026-11-22",
+      "total": 21.67,
+      "category": "Meals"
+    },
+    "log": "7:50:07 PM  Done in 1.6s via in-cloud.7:50:05 PM  Reading in the cloud with Gemini…7:50:05 PM  Reading e-lunch-clean.jpg (Expenses, cloud)…"
+  },
+  {
+    "id": "e-lunch",
+    "mode": "expenses",
+    "variant": "sans",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "KOPI KENANGAN SENOPATI",
+      "date": "2026-11-22",
+      "total": 21.67,
+      "category": "Meals",
+      "party": "Rina Putri",
+      "reference": "R-30412",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Kopi Kenangan Senopati",
+      "reference": "R-30412",
+      "party": "Rina Putri",
+      "date": "2026-11-22",
+      "total": 21.67,
+      "category": "Meals"
+    },
+    "log": "7:50:10 PM  Done in 1.8s via in-cloud.7:50:08 PM  Reading in the cloud with Gemini…7:50:08 PM  Reading e-lunch-sans.jpg (Expenses, cloud)…"
+  },
+  {
+    "id": "e-lunch",
+    "mode": "expenses",
+    "variant": "degraded",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "KOPI KENANGAN SENOPATI",
+      "date": "2026-11-22",
+      "total": 21.67,
+      "category": "Meals",
+      "party": "Rina Putri",
+      "reference": "R-30412",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Kopi Kenangan Senopati",
+      "reference": "R-30412",
+      "party": "Rina Putri",
+      "date": "2026-11-22",
+      "total": 21.67,
+      "category": "Meals"
+    },
+    "log": "7:50:14 PM  Done in 2.2s via in-cloud.7:50:12 PM  Reading in the cloud with Gemini…7:50:12 PM  Reading e-lunch-degraded.jpg (Expenses, cloud)…"
+  },
+  {
+    "id": "e-dinner",
+    "mode": "expenses",
+    "variant": "clean",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "SUNSET GRILL",
+      "date": "2026-10-17",
+      "total": 84,
+      "category": "Meals",
+      "party": "Rina Putri",
+      "reference": "R-88120",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Document is 41 days old. Filing window is 30 days.",
+        "Meals cap is 60 USD; this document is 84.00.",
+        "\"Draft beer x4\": Alcohol, tobacco or gifts are not reimbursed under most policies.",
+        "No tax line found on a receipt above 25."
+      ]
+    },
+    "truth": {
+      "provider": "Sunset Grill",
+      "reference": "R-88120",
+      "party": "Rina Putri",
+      "date": "2026-10-17",
+      "total": 84,
+      "category": "Meals"
+    },
+    "log": "7:50:17 PM  Done in 1.6s via in-cloud.7:50:15 PM  Reading in the cloud with Gemini…7:50:15 PM  Reading e-dinner-clean.jpg (Expenses, cloud)…"
+  },
+  {
+    "id": "e-dinner",
+    "mode": "expenses",
+    "variant": "sans",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "Sunset Grill",
+      "date": "2026-10-17",
+      "total": 84,
+      "category": "Meals",
+      "party": "Rina Putri",
+      "reference": "R-88120",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Document is 41 days old. Filing window is 30 days.",
+        "Meals cap is 60 USD; this document is 84.00.",
+        "\"Draft beer x4\": Alcohol, tobacco or gifts are not reimbursed under most policies.",
+        "No tax line found on a receipt above 25.",
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Sunset Grill",
+      "reference": "R-88120",
+      "party": "Rina Putri",
+      "date": "2026-10-17",
+      "total": 84,
+      "category": "Meals"
+    },
+    "log": "7:50:20 PM  Done in 1.5s via in-cloud.7:50:18 PM  Reading in the cloud with Gemini…7:50:18 PM  Reading e-dinner-sans.jpg (Expenses, cloud)…"
+  },
+  {
+    "id": "e-dinner",
+    "mode": "expenses",
+    "variant": "degraded",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "SUNSET GRILL",
+      "date": "2026-10-17",
+      "total": 84,
+      "category": "Meals",
+      "party": "Rina Putri",
+      "reference": "R-88120",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Document is 41 days old. Filing window is 30 days.",
+        "Meals cap is 60 USD; this document is 84.00.",
+        "No tax line found on a receipt above 25.",
+        "Same provider, reference, date and total already in this claim."
+      ]
+    },
+    "truth": {
+      "provider": "Sunset Grill",
+      "reference": "R-88120",
+      "party": "Rina Putri",
+      "date": "2026-10-17",
+      "total": 84,
+      "category": "Meals"
+    },
+    "log": "7:50:23 PM  Done in 2.0s via in-cloud.7:50:21 PM  Reading in the cloud with Gemini…7:50:21 PM  Reading e-dinner-degraded.jpg (Expenses, cloud)…"
+  },
+  {
+    "id": "h-clinic",
+    "mode": "health",
+    "variant": "tilt",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": false,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "Klinik Sehat Sentosa",
+      "date": "2026-11-18",
+      "total": 79.5,
+      "category": "Consultation",
+      "party": "Budi Santoso",
+      "reference": "INV-28410",
+      "badge": "CLOUD · Gemini",
+      "flags": []
+    },
+    "truth": {
+      "provider": "Klinik Sehat Sentosa",
+      "reference": "INV-20418",
+      "party": "Budi Santoso",
+      "date": "2026-11-18",
+      "total": 79.5,
+      "category": "Consultation"
+    },
+    "log": "7:50:35 PM  Done in 3.5s via in-cloud.7:50:32 PM  Reading in the cloud with Gemini…7:50:32 PM  Reading h-clinic-tilt.jpg (Health, cloud)…"
+  },
+  {
+    "id": "h-clinic",
+    "mode": "health",
+    "variant": "indo",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "KLINIK SEHAT SENTOSA",
+      "date": "2026-11-18",
+      "total": 79.5,
+      "category": "Consultation",
+      "party": "Budi Santoso",
+      "reference": "INV-20418",
+      "badge": "CLOUD · Gemini",
+      "flags": []
+    },
+    "truth": {
+      "provider": "Klinik Sehat Sentosa",
+      "reference": "INV-20418",
+      "party": "Budi Santoso",
+      "date": "2026-11-18",
+      "total": 79.5,
+      "category": "Consultation"
+    },
+    "log": "7:50:39 PM  Done in 2.6s via in-cloud.7:50:37 PM  Reading in the cloud with Gemini…7:50:37 PM  Reading h-clinic-indo.jpg (Health, cloud)…"
+  },
+  {
+    "id": "h-hospital",
+    "mode": "health",
+    "variant": "tilt",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": false,
+      "party": true,
+      "date": false,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "RS HARAPAN BUNDA",
+      "date": "2020-10-24",
+      "total": 1655,
+      "category": "Hospital room",
+      "party": "Budi Santoso",
+      "reference": "IF-77316",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Document is 2225 days old. Filing window is 90 days.",
+        "Hospital room cap is 900 USD; this document is 1655.00.",
+        "No itemised lines. Ask for an itemised document before paying."
+      ]
+    },
+    "truth": {
+      "provider": "RS Harapan Bunda",
+      "reference": "IP-77310",
+      "party": "Budi Santoso",
+      "date": "2026-10-24",
+      "total": 1655,
+      "category": "Hospital room"
+    },
+    "log": "7:50:43 PM  Done in 1.9s via in-cloud.7:50:41 PM  Reading in the cloud with Gemini…7:50:41 PM  Reading h-hospital-tilt.jpg (Health, cloud)…"
+  },
+  {
+    "id": "h-hospital",
+    "mode": "health",
+    "variant": "indo",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "RS HARAPAN BUNDA",
+      "date": "2026-10-24",
+      "total": 1655,
+      "category": "Hospital room",
+      "party": "Budi Santoso",
+      "reference": "IP-77310",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Hospital room cap is 900 USD; this document is 1655.00.",
+        "\"Vitamin C infusion\": Item is usually excluded from health cover (cosmetic or non-medical).",
+        "\"Whitening kit\": Item is usually excluded from health cover (cosmetic or non-medical).",
+        "Room line 540.00 is above the plan cap of 150 per day. Check the number of days."
+      ]
+    },
+    "truth": {
+      "provider": "RS Harapan Bunda",
+      "reference": "IP-77310",
+      "party": "Budi Santoso",
+      "date": "2026-10-24",
+      "total": 1655,
+      "category": "Hospital room"
+    },
+    "log": "7:50:47 PM  Done in 2.1s via in-cloud.7:50:44 PM  Reading in the cloud with Gemini…7:50:44 PM  Reading h-hospital-indo.jpg (Health, cloud)…"
+  },
+  {
+    "id": "m-bumper",
+    "mode": "motor",
+    "variant": "tilt",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": false,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "BENGKEL JAYA MOTOR",
+      "date": "2020-11-25",
+      "total": 720,
+      "category": "Repair invoice",
+      "party": "Dewi Lestari",
+      "reference": "B 1234 XYZ",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Document is 2193 days old. Filing window is 60 days."
+      ]
+    },
+    "truth": {
+      "provider": "Bengkel Jaya Motor",
+      "reference": "B 1234 XYZ",
+      "party": "Dewi Lestari",
+      "date": "2026-11-21",
+      "total": 720,
+      "category": "Repair invoice"
+    },
+    "log": "7:50:50 PM  Done in 2.1s via in-cloud.7:50:48 PM  Reading in the cloud with Gemini…7:50:48 PM  Reading m-bumper-tilt.jpg (Motor, cloud)…"
+  },
+  {
+    "id": "m-bumper",
+    "mode": "motor",
+    "variant": "indo",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "BENGKEL JAYA MOTOR",
+      "date": "2026-11-21",
+      "total": 720,
+      "category": "Repair invoice",
+      "party": "Dewi Lestari",
+      "reference": "B 1234 XYZ",
+      "badge": "CLOUD · Gemini",
+      "flags": []
+    },
+    "truth": {
+      "provider": "Bengkel Jaya Motor",
+      "reference": "B 1234 XYZ",
+      "party": "Dewi Lestari",
+      "date": "2026-11-21",
+      "total": 720,
+      "category": "Repair invoice"
+    },
+    "log": "7:50:54 PM  Done in 1.9s via in-cloud.7:50:52 PM  Reading in the cloud with Gemini…7:50:52 PM  Reading m-bumper-indo.jpg (Motor, cloud)…"
+  },
+  {
+    "id": "m-late",
+    "mode": "motor",
+    "variant": "tilt",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": false,
+      "date": false,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "AUTO PRIMA GARAGE",
+      "date": "2026-10-25",
+      "total": 653,
+      "category": "Repair invoice",
+      "party": "Omit testart",
+      "reference": "B 1234 XYZ",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "\"Oil change\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
+        "\"Wiper blades\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
+        "Labour is 64% of the invoice (limit 55%). Ask for a parts breakdown."
+      ]
+    },
+    "truth": {
+      "provider": "Auto Prima Garage",
+      "reference": "B 1234 XYZ",
+      "party": "Dewi Lestari",
+      "date": "2026-10-28",
+      "total": 653,
+      "category": "Repair invoice"
+    },
+    "log": "7:50:57 PM  Done in 2.2s via in-cloud.7:50:55 PM  Reading in the cloud with Gemini…7:50:55 PM  Reading m-late-tilt.jpg (Motor, cloud)…"
+  },
+  {
+    "id": "m-late",
+    "mode": "motor",
+    "variant": "indo",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": false,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "workshop",
+      "date": "2026-10-28",
+      "total": 653,
+      "category": "Repair invoice",
+      "party": "Dewi Lestari",
+      "reference": "B 1234 XYZ",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "\"Oil change\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
+        "\"Wiper blades\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
+        "Labour is 64% of the invoice (limit 55%). Ask for a parts breakdown."
+      ]
+    },
+    "truth": {
+      "provider": "Auto Prima Garage",
+      "reference": "B 1234 XYZ",
+      "party": "Dewi Lestari",
+      "date": "2026-10-28",
+      "total": 653,
+      "category": "Repair invoice"
+    },
+    "log": "7:51:01 PM  Done in 1.9s via in-cloud.7:50:59 PM  Reading in the cloud with Gemini…7:50:59 PM  Reading m-late-indo.jpg (Motor, cloud)…"
+  },
+  {
+    "id": "t-clinic",
+    "mode": "travel",
+    "variant": "tilt",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": false,
+      "party": true,
+      "date": false,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "BANGKOK CARE CLINIC",
+      "date": "2018-11-19",
+      "total": 147,
+      "category": "Medical abroad",
+      "party": "Sari Putri",
+      "reference": "TRV-85302",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Document is 2930 days old. Filing window is 60 days.",
+        "No itemised lines. Ask for an itemised document before paying."
+      ]
+    },
+    "truth": {
+      "provider": "Bangkok Care Clinic",
+      "reference": "TRV-55102",
+      "party": "Sari Putri",
+      "date": "2026-11-19",
+      "total": 147,
+      "category": "Medical abroad"
+    },
+    "log": "7:51:04 PM  Done in 1.8s via in-cloud.7:51:02 PM  Reading in the cloud with Gemini…7:51:02 PM  Reading t-clinic-tilt.jpg (Travel, cloud)…"
+  },
+  {
+    "id": "t-clinic",
+    "mode": "travel",
+    "variant": "indo",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "BANGKOK CARE CLINIC",
+      "date": "2026-11-19",
+      "total": 147,
+      "category": "Medical abroad",
+      "party": "Sari Putri",
+      "reference": "TRV-55102",
+      "badge": "CLOUD · Gemini",
+      "flags": []
+    },
+    "truth": {
+      "provider": "Bangkok Care Clinic",
+      "reference": "TRV-55102",
+      "party": "Sari Putri",
+      "date": "2026-11-19",
+      "total": 147,
+      "category": "Medical abroad"
+    },
+    "log": "7:51:08 PM  Done in 1.9s via in-cloud.7:51:06 PM  Reading in the cloud with Gemini…7:51:06 PM  Reading t-clinic-indo.jpg (Travel, cloud)…"
+  },
+  {
+    "id": "t-hotel",
+    "mode": "travel",
+    "variant": "tilt",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": false,
+      "party": true,
+      "date": false,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "LOTUS BAY HOTEL",
+      "date": "2026-11-20",
+      "total": 263,
+      "category": "Hotel",
+      "party": "Sari Putri",
+      "reference": "TRV-35502",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "No itemised lines. Ask for an itemised document before paying."
+      ]
+    },
+    "truth": {
+      "provider": "Lotus Bay Hotel",
+      "reference": "TRV-55102",
+      "party": "Sari Putri",
+      "date": "2026-11-25",
+      "total": 263,
+      "category": "Hotel"
+    },
+    "log": "7:51:11 PM  Done in 2.1s via in-cloud.7:51:09 PM  Reading in the cloud with Gemini…7:51:09 PM  Reading t-hotel-tilt.jpg (Travel, cloud)…"
+  },
+  {
+    "id": "t-hotel",
+    "mode": "travel",
+    "variant": "indo",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": false,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "LOTUS BAY HOTEL",
+      "date": "2026-11-25",
+      "total": 263,
+      "category": "Hotel",
+      "party": "",
+      "reference": "TRV-55102",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Traveller name is missing. The handler cannot match this document to the insured.",
+        "No itemised lines. Ask for an itemised document before paying."
+      ]
+    },
+    "truth": {
+      "provider": "Lotus Bay Hotel",
+      "reference": "TRV-55102",
+      "party": "Sari Putri",
+      "date": "2026-11-25",
+      "total": 263,
+      "category": "Hotel"
+    },
+    "log": "7:51:15 PM  Done in 2.2s via in-cloud.7:51:13 PM  Reading in the cloud with Gemini…7:51:13 PM  Reading t-hotel-indo.jpg (Travel, cloud)…"
+  },
+  {
+    "id": "e-lunch",
+    "mode": "expenses",
+    "variant": "tilt",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": false,
+      "party": true,
+      "date": false,
+      "total": false,
+      "category": true
+    },
+    "got": {
+      "provider": "KOPI KENANGAN SENOPATI",
+      "date": "2020-11-22",
+      "total": 21.07,
+      "category": "Meals",
+      "party": "RINA PUTRI",
+      "reference": "R-06412",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Document is 2196 days old. Filing window is 30 days."
+      ]
+    },
+    "truth": {
+      "provider": "Kopi Kenangan Senopati",
+      "reference": "R-30412",
+      "party": "Rina Putri",
+      "date": "2026-11-22",
+      "total": 21.67,
+      "category": "Meals"
+    },
+    "log": "7:51:19 PM  Done in 2.0s via in-cloud.7:51:17 PM  Reading in the cloud with Gemini…7:51:17 PM  Reading e-lunch-tilt.jpg (Expenses, cloud)…"
+  },
+  {
+    "id": "e-lunch",
+    "mode": "expenses",
+    "variant": "indo",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "KOPI KENANGAN SENOPATI",
+      "date": "2026-11-22",
+      "total": 21.67,
+      "category": "Meals",
+      "party": "Rina Putri",
+      "reference": "R-30412",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Line items + tax = 23.64 but the total reads 21.67. Check the scan or the document."
+      ]
+    },
+    "truth": {
+      "provider": "Kopi Kenangan Senopati",
+      "reference": "R-30412",
+      "party": "Rina Putri",
+      "date": "2026-11-22",
+      "total": 21.67,
+      "category": "Meals"
+    },
+    "log": "7:51:22 PM  Done in 1.7s via in-cloud.7:51:20 PM  Reading in the cloud with Gemini…7:51:20 PM  Reading e-lunch-indo.jpg (Expenses, cloud)…"
+  },
+  {
+    "id": "e-dinner",
+    "mode": "expenses",
+    "variant": "tilt",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": false,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "Sunset Grill",
+      "date": "2026-10-17",
+      "total": 84,
+      "category": "Meals",
+      "party": "Rina Putri",
+      "reference": "R-65126",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Document is 41 days old. Filing window is 30 days.",
+        "Meals cap is 60 USD; this document is 84.00.",
+        "\"Draft beer x4\": Alcohol, tobacco or gifts are not reimbursed under most policies.",
+        "No tax line found on a receipt above 25."
+      ]
+    },
+    "truth": {
+      "provider": "Sunset Grill",
+      "reference": "R-88120",
+      "party": "Rina Putri",
+      "date": "2026-10-17",
+      "total": 84,
+      "category": "Meals"
+    },
+    "log": "7:51:25 PM  Done in 2.0s via in-cloud.7:51:23 PM  Reading in the cloud with Gemini…7:51:23 PM  Reading e-dinner-tilt.jpg (Expenses, cloud)…"
+  },
+  {
+    "id": "e-dinner",
+    "mode": "expenses",
+    "variant": "indo",
+    "ok": true,
+    "badge": "CLOUD · Gemini",
+    "fields": {
+      "provider": true,
+      "reference": true,
+      "party": true,
+      "date": true,
+      "total": true,
+      "category": true
+    },
+    "got": {
+      "provider": "SUNSET GRILL",
+      "date": "2026-10-17",
+      "total": 84,
+      "category": "Meals",
+      "party": "Rina Putri",
+      "reference": "R-88120",
+      "badge": "CLOUD · Gemini",
+      "flags": [
+        "Document is 41 days old. Filing window is 30 days.",
+        "Meals cap is 60 USD; this document is 84.00.",
+        "\"Draft beer x4\": Alcohol, tobacco or gifts are not reimbursed under most policies.",
+        "No tax line found on a receipt above 25."
+      ]
+    },
+    "truth": {
+      "provider": "Sunset Grill",
+      "reference": "R-88120",
+      "party": "Rina Putri",
+      "date": "2026-10-17",
+      "total": 84,
+      "category": "Meals"
+    },
+    "log": "7:51:30 PM  Done in 2.8s via in-cloud.7:51:27 PM  Reading in the cloud with Gemini…7:51:27 PM  Reading e-dinner-indo.jpg (Expenses, cloud)…"
   }
- },
- {
-  "id": "h-clinic",
-  "mode": "health",
-  "variant": "sans",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "KLINIK SEHAT SENTOSA",
-   "date": "2026-11-18",
-   "total": 79.5,
-   "category": "Consultation",
-   "party": "Budi Santoso",
-   "reference": "INV-20418",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Klinik Sehat Sentosa",
-   "reference": "INV-20418",
-   "party": "Budi Santoso",
-   "date": "2026-11-18",
-   "total": 79.5,
-   "category": "Consultation"
-  }
- },
- {
-  "id": "h-clinic",
-  "mode": "health",
-  "variant": "degraded",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": false,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "KLINIK SEHAT SENTOSA",
-   "date": "2026-11-18",
-   "total": 79.5,
-   "category": "Consultation",
-   "party": "",
-   "reference": "INV-20418",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Patient name is missing. The handler cannot match this document to the insured.",
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Klinik Sehat Sentosa",
-   "reference": "INV-20418",
-   "party": "Budi Santoso",
-   "date": "2026-11-18",
-   "total": 79.5,
-   "category": "Consultation"
-  }
- },
- {
-  "id": "h-hospital",
-  "mode": "health",
-  "variant": "clean",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "RS HARAPAN BUNDA",
-   "date": "2026-10-24",
-   "total": 1655,
-   "category": "Hospital room",
-   "party": "Budi Santoso",
-   "reference": "IP-77310",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Hospital room cap is 900 USD; this document is 1655.00.",
-    "\"Vitamin C infusion\": Item is usually excluded from health cover (cosmetic or non-medical).",
-    "\"Whitening kit\": Item is usually excluded from health cover (cosmetic or non-medical).",
-    "Room line 540.00 is above the plan cap of 150 per day. Check the number of days."
-   ]
-  },
-  "truth": {
-   "provider": "RS Harapan Bunda",
-   "reference": "IP-77310",
-   "party": "Budi Santoso",
-   "date": "2026-10-24",
-   "total": 1655,
-   "category": "Hospital room"
-  }
- },
- {
-  "id": "h-hospital",
-  "mode": "health",
-  "variant": "sans",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": false,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "RS HARAPAN BUNDA",
-   "date": "2026-10-24",
-   "total": 1655,
-   "category": "Hospital room",
-   "party": "",
-   "reference": "IP-77310",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Patient name is missing. The handler cannot match this document to the insured.",
-    "Hospital room cap is 900 USD; this document is 1655.00.",
-    "No itemised lines. Ask for an itemised document before paying.",
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "RS Harapan Bunda",
-   "reference": "IP-77310",
-   "party": "Budi Santoso",
-   "date": "2026-10-24",
-   "total": 1655,
-   "category": "Hospital room"
-  }
- },
- {
-  "id": "h-hospital",
-  "mode": "health",
-  "variant": "degraded",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "RS HARAPAN BUNDA",
-   "date": "2026-10-24",
-   "total": 1655,
-   "category": "Hospital room",
-   "party": "Budi Santoso",
-   "reference": "IP-77310",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Hospital room cap is 900 USD; this document is 1655.00.",
-    "\"Vitamin C infusion\": Item is usually excluded from health cover (cosmetic or non-medical).",
-    "\"Whitening kit\": Item is usually excluded from health cover (cosmetic or non-medical).",
-    "Room line 540.00 is above the plan cap of 150 per day. Check the number of days.",
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "RS Harapan Bunda",
-   "reference": "IP-77310",
-   "party": "Budi Santoso",
-   "date": "2026-10-24",
-   "total": 1655,
-   "category": "Hospital room"
-  }
- },
- {
-  "id": "m-bumper",
-  "mode": "motor",
-  "variant": "clean",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "BENGKEL JAYA MOTOR",
-   "date": "2026-11-21",
-   "total": 720,
-   "category": "Repair invoice",
-   "party": "Dewi Lestari",
-   "reference": "B 1234 XYZ",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": []
-  },
-  "truth": {
-   "provider": "Bengkel Jaya Motor",
-   "reference": "B 1234 XYZ",
-   "party": "Dewi Lestari",
-   "date": "2026-11-21",
-   "total": 720,
-   "category": "Repair invoice"
-  }
- },
- {
-  "id": "m-bumper",
-  "mode": "motor",
-  "variant": "sans",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "Bengkel Jaya Motor",
-   "date": "2026-11-21",
-   "total": 720,
-   "category": "Repair invoice",
-   "party": "Dewi Lestari",
-   "reference": "B 1234 XYZ",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Bengkel Jaya Motor",
-   "reference": "B 1234 XYZ",
-   "party": "Dewi Lestari",
-   "date": "2026-11-21",
-   "total": 720,
-   "category": "Repair invoice"
-  }
- },
- {
-  "id": "m-bumper",
-  "mode": "motor",
-  "variant": "degraded",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "Bengkel Jaya Motor",
-   "date": "2026-11-21",
-   "total": 720,
-   "category": "Repair invoice",
-   "party": "Dewi Lestari",
-   "reference": "B 1234 XYZ",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Bengkel Jaya Motor",
-   "reference": "B 1234 XYZ",
-   "party": "Dewi Lestari",
-   "date": "2026-11-21",
-   "total": 720,
-   "category": "Repair invoice"
-  }
- },
- {
-  "id": "m-late",
-  "mode": "motor",
-  "variant": "clean",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "AUTO PRIMA GARAGE",
-   "date": "2026-10-28",
-   "total": 653,
-   "category": "Repair invoice",
-   "party": "Dewi Lestari",
-   "reference": "B 1234 XYZ",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "\"Oil change\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
-    "\"Wiper blades\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
-    "Labour is 64% of the invoice (limit 55%). Ask for a parts breakdown."
-   ]
-  },
-  "truth": {
-   "provider": "Auto Prima Garage",
-   "reference": "B 1234 XYZ",
-   "party": "Dewi Lestari",
-   "date": "2026-10-28",
-   "total": 653,
-   "category": "Repair invoice"
-  }
- },
- {
-  "id": "m-late",
-  "mode": "motor",
-  "variant": "sans",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "Auto Prima Garage",
-   "date": "2026-10-28",
-   "total": 653,
-   "category": "Repair invoice",
-   "party": "Dewi Lestari",
-   "reference": "B 1234 XYZ",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "No itemised lines. Ask for an itemised document before paying.",
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Auto Prima Garage",
-   "reference": "B 1234 XYZ",
-   "party": "Dewi Lestari",
-   "date": "2026-10-28",
-   "total": 653,
-   "category": "Repair invoice"
-  }
- },
- {
-  "id": "m-late",
-  "mode": "motor",
-  "variant": "degraded",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "AUTO PRIMA GARAGE",
-   "date": "2026-10-28",
-   "total": 653,
-   "category": "Repair invoice",
-   "party": "Dewi Lestari",
-   "reference": "B 1234 XYZ",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "\"Oil change\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
-    "\"Wiper blades\": Wear, maintenance or upgrade item. Collision cover usually excludes it.",
-    "Labour is 64% of the invoice (limit 55%). Ask for a parts breakdown.",
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Auto Prima Garage",
-   "reference": "B 1234 XYZ",
-   "party": "Dewi Lestari",
-   "date": "2026-10-28",
-   "total": 653,
-   "category": "Repair invoice"
-  }
- },
- {
-  "id": "t-clinic",
-  "mode": "travel",
-  "variant": "clean",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "BANGKOK CARE CLINIC",
-   "date": "2026-11-19",
-   "total": 147,
-   "category": "Medical abroad",
-   "party": "Sari Putri",
-   "reference": "TRV-55102",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": []
-  },
-  "truth": {
-   "provider": "Bangkok Care Clinic",
-   "reference": "TRV-55102",
-   "party": "Sari Putri",
-   "date": "2026-11-19",
-   "total": 147,
-   "category": "Medical abroad"
-  }
- },
- {
-  "id": "t-clinic",
-  "mode": "travel",
-  "variant": "sans",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "Bangkok Care Clinic",
-   "date": "2026-11-19",
-   "total": 147,
-   "category": "Medical abroad",
-   "party": "Sari Putri",
-   "reference": "TRV-55102",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Bangkok Care Clinic",
-   "reference": "TRV-55102",
-   "party": "Sari Putri",
-   "date": "2026-11-19",
-   "total": 147,
-   "category": "Medical abroad"
-  }
- },
- {
-  "id": "t-clinic",
-  "mode": "travel",
-  "variant": "degraded",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "Bangkok Care Clinic",
-   "date": "2026-11-19",
-   "total": 147,
-   "category": "Medical abroad",
-   "party": "Sari Putri",
-   "reference": "TRV-55102",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Bangkok Care Clinic",
-   "reference": "TRV-55102",
-   "party": "Sari Putri",
-   "date": "2026-11-19",
-   "total": 147,
-   "category": "Medical abroad"
-  }
- },
- {
-  "id": "t-hotel",
-  "mode": "travel",
-  "variant": "clean",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "LOTUS BAY HOTEL",
-   "date": "2026-11-25",
-   "total": 263,
-   "category": "Hotel",
-   "party": "Sari Putri",
-   "reference": "TRV-55102",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "\"Minibar wine\": Item is normally not covered (alcohol, gifts, leisure).",
-    "\"Souvenir shop\": Item is normally not covered (alcohol, gifts, leisure)."
-   ]
-  },
-  "truth": {
-   "provider": "Lotus Bay Hotel",
-   "reference": "TRV-55102",
-   "party": "Sari Putri",
-   "date": "2026-11-25",
-   "total": 263,
-   "category": "Hotel"
-  }
- },
- {
-  "id": "t-hotel",
-  "mode": "travel",
-  "variant": "sans",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "LOTUS BAY HOTEL",
-   "date": "2026-11-25",
-   "total": 263,
-   "category": "Hotel",
-   "party": "Sari Putri",
-   "reference": "TRV-55102",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "\"Minibar wine\": Item is normally not covered (alcohol, gifts, leisure).",
-    "\"Souvenir shop\": Item is normally not covered (alcohol, gifts, leisure).",
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Lotus Bay Hotel",
-   "reference": "TRV-55102",
-   "party": "Sari Putri",
-   "date": "2026-11-25",
-   "total": 263,
-   "category": "Hotel"
-  }
- },
- {
-  "id": "t-hotel",
-  "mode": "travel",
-  "variant": "degraded",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "LOTUS BAY HOTEL",
-   "date": "2026-11-25",
-   "total": 263,
-   "category": "Hotel",
-   "party": "Sari Putri",
-   "reference": "TRV-55102",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "\"Minibar wine\": Item is normally not covered (alcohol, gifts, leisure).",
-    "\"Souvenir shop\": Item is normally not covered (alcohol, gifts, leisure).",
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Lotus Bay Hotel",
-   "reference": "TRV-55102",
-   "party": "Sari Putri",
-   "date": "2026-11-25",
-   "total": 263,
-   "category": "Hotel"
-  }
- },
- {
-  "id": "e-lunch",
-  "mode": "expenses",
-  "variant": "clean",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "KOPI KENANGAN SENOPATI",
-   "date": "2026-11-22",
-   "total": 21.67,
-   "category": "Meals",
-   "party": "Rina Putri",
-   "reference": "R-30412",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": []
-  },
-  "truth": {
-   "provider": "Kopi Kenangan Senopati",
-   "reference": "R-30412",
-   "party": "Rina Putri",
-   "date": "2026-11-22",
-   "total": 21.67,
-   "category": "Meals"
-  }
- },
- {
-  "id": "e-lunch",
-  "mode": "expenses",
-  "variant": "sans",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "KOPI KENANGAN SENOPATI",
-   "date": "2026-11-22",
-   "total": 21.67,
-   "category": "Meals",
-   "party": "Rina Putri",
-   "reference": "R-30412",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Kopi Kenangan Senopati",
-   "reference": "R-30412",
-   "party": "Rina Putri",
-   "date": "2026-11-22",
-   "total": 21.67,
-   "category": "Meals"
-  }
- },
- {
-  "id": "e-lunch",
-  "mode": "expenses",
-  "variant": "degraded",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "KOPI KENANGAN SENOPATI",
-   "date": "2026-11-22",
-   "total": 21.67,
-   "category": "Meals",
-   "party": "Rina Putri",
-   "reference": "R-30412",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Kopi Kenangan Senopati",
-   "reference": "R-30412",
-   "party": "Rina Putri",
-   "date": "2026-11-22",
-   "total": 21.67,
-   "category": "Meals"
-  }
- },
- {
-  "id": "e-dinner",
-  "mode": "expenses",
-  "variant": "clean",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "Sunset Grill",
-   "date": "2026-10-17",
-   "total": 84,
-   "category": "Meals",
-   "party": "Rina Putri",
-   "reference": "R-88120",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Document is 41 days old. Filing window is 30 days.",
-    "Meals cap is 60 USD; this document is 84.00.",
-    "\"Draft beer x4\": Alcohol, tobacco or gifts are not reimbursed under most policies.",
-    "No tax line found on a receipt above 25."
-   ]
-  },
-  "truth": {
-   "provider": "Sunset Grill",
-   "reference": "R-88120",
-   "party": "Rina Putri",
-   "date": "2026-10-17",
-   "total": 84,
-   "category": "Meals"
-  }
- },
- {
-  "id": "e-dinner",
-  "mode": "expenses",
-  "variant": "sans",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "Sunset Grill",
-   "date": "2026-10-17",
-   "total": 84,
-   "category": "Meals",
-   "party": "Rina Putri",
-   "reference": "R-88120",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Document is 41 days old. Filing window is 30 days.",
-    "Meals cap is 60 USD; this document is 84.00.",
-    "\"Draft beer x4\": Alcohol, tobacco or gifts are not reimbursed under most policies.",
-    "No tax line found on a receipt above 25.",
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Sunset Grill",
-   "reference": "R-88120",
-   "party": "Rina Putri",
-   "date": "2026-10-17",
-   "total": 84,
-   "category": "Meals"
-  }
- },
- {
-  "id": "e-dinner",
-  "mode": "expenses",
-  "variant": "degraded",
-  "ok": true,
-  "badge": "CLOUD \u00b7 Gemini",
-  "fields": {
-   "provider": true,
-   "reference": true,
-   "party": true,
-   "date": true,
-   "total": true,
-   "category": true
-  },
-  "got": {
-   "provider": "Sunset Grill",
-   "date": "2026-10-17",
-   "total": 84,
-   "category": "Meals",
-   "party": "Rina Putri",
-   "reference": "R-88120",
-   "badge": "CLOUD \u00b7 Gemini",
-   "flags": [
-    "Document is 41 days old. Filing window is 30 days.",
-    "Meals cap is 60 USD; this document is 84.00.",
-    "\"Draft beer x4\": Alcohol, tobacco or gifts are not reimbursed under most policies.",
-    "No tax line found on a receipt above 25.",
-    "Same provider, reference, date and total already in this claim."
-   ]
-  },
-  "truth": {
-   "provider": "Sunset Grill",
-   "reference": "R-88120",
-   "party": "Rina Putri",
-   "date": "2026-10-17",
-   "total": 84,
-   "category": "Meals"
-  }
- }
 ]
