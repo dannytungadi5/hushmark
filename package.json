@@ -1,0 +1,23 @@
+{
+  "name": "hushmark",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node tests/policy.test.mjs",
+    "test:e2e": "node tests/nano.e2e.mjs",
+    "test:e2e:packs": "node tests/packs.e2e.mjs",
+    "bench": "node tools/bench.mjs"
+  },
+  "dependencies": {
+    "firebase": "^13.4.0"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.65.1",
+    "vite": "^8.4.0"
+  }
+}
